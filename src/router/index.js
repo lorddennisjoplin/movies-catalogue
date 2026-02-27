@@ -29,14 +29,14 @@ router.beforeEach((to, from, next) => {
     return next("/movies");
   }
 
-  // const protectedRoutes = ["/movies"];
+  const protectedRoutes = ["/movies"];
 
-  // if (
-  //   !auth.isAuthenticated &&
-  //   protectedRoutes.some(route => to.path.startsWith(route))
-  // ) {
-  //   return next("/login");
-  // }
+  if (
+    !auth.isAuthenticated &&
+    protectedRoutes.some(route => to.path.startsWith(route))
+  ) {
+    return next("/login");
+  }
 
   next();
 });
