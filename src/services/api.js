@@ -1,6 +1,6 @@
 import axios from "axios";
 
-VITE_API_URL = 'https://moviescatalogueapi-acuna.onrender.com'
+const VITE_API_URL = 'https://moviescatalogueapi-acuna.onrender.com'
 
 const api = axios.create({
   // baseURL: import.meta.env.VITE_API_URL
