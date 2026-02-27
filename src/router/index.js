@@ -29,7 +29,7 @@ router.beforeEach((to, from, next) => {
     return next("/movies");
   }
 
-  const protectedRoutes = ["/movies"];
+  const protectedRoutes = ["/movies/movie"];
 
   if (
     !auth.isAuthenticated &&
